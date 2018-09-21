@@ -1,0 +1,73 @@
+    .g-slideshow-buttons {
+        margin: 25px 0 0;
+        @include breakpoint(mobile-only) {
+            margin: 15px 0 0;
+        }
+        .button {
+            margin-right: 15px;
+            border: 2px solid $accent-color-1;
+            @include transition(all 0.3s);
+            &:hover {
+                background: lighten($accent-color-1, 8%);
+                border-color: lighten($accent-color-1, 8%);
+
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            > span {
+                margin-right: 10px;
+            }
+            @include breakpoint(mobile-only) {
+                display: block;
+                margin-right: 0;
+                margin-bottom: 15px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            @include breakpoint(tablet-range) {
+                display: block;
+                margin-right: 0;
+                margin-bottom: 15px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            &.empty {
+                background: none;
+                border: 2px solid $accent-color-1;
+                color: $accent-color-1;
+                &:hover {
+                    background: $accent-color-1;
+                    border-color: $accent-color-1;
+                    color: #ffffff;
+                }
+            }
+        }
+    }   
+
+    .slideshow-caption {
+        &.uk-overlay-background {
+            padding: 25px;
+        }
+    }
+
+.jl-text-dark{
+    color: #040404 !important;
+}
+.jl-text-light{
+    color: #f6f9fc !important;
+}
+.jl-particle-intro{
+  padding-left: 15px;
+}
+.jl-slide-title{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.jl-slide-introtxt{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
