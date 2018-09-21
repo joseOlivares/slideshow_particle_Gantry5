@@ -1,5 +1,5 @@
 # slideshow_particle_Gantry5
-My updated version of Gantry 5 slide show particle
+My updated version of Gantry 5 slide show particle using UIKit 3
 
 Hi my name is Jose Olivares, this is my updated version of the slideshow Gantry 5 particle (it is based on the inspiretheme free slideshow particle).
 
