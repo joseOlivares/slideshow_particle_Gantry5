@@ -7,6 +7,7 @@ Hi my name is Jose Olivares, this is my updated version of the slideshow Gantry 
 What's new?
  
 -It uses the updated UIkit 3 framework
+
 -Some new parameters added in order to a better customize of the slideshow.
 
 
