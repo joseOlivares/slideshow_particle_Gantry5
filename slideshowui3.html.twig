@@ -184,16 +184,19 @@
 
                 {%- if item.overlaybackground|default('none') == 'white' -%}
                     uk-overlay-default jl-text-dark
+                {% set myTextColor = 'jl-text-dark' %}
+
                 {%- endif -%}
 
                 {%- if item.overlaybackground|default('none') == 'dark' -%}
                     uk-overlay-primary jl-text-light
+                    {% set myTextColor = 'jl-text-light' %}
                 {%- endif -%}                
 
             {% endset %}
 
             {% set title %}
-                <h3 class="g-slideshow-title uk-margin-remove">
+                <h3 class="g-slideshow-title {{myTextColor}}">
                     {%- if item.link -%}
                         <a target="{{ item.target|default('_parent')|e }}" href="{{ item.link|e }}">
                     {%- endif -%}
@@ -205,7 +208,7 @@
             {% endset %}
 
             {% set description %}
-                <div class="g-slideshow-desc">
+                <div class="g-slideshow-desc {{myTextColor}}">
                     {{- gantry.platform.filter(item.description)|html|raw -}}
                 </div>
             {% endset %}
@@ -223,81 +226,23 @@
                 </div>
             {% endset %}
 
-            {% if item.overlaystyle|default('style1') == 'style1' %}
+            <div class="uk-overlay {{ overlay_position }} {{slide_overlay_background}} uk-text-{{item.content_align|default('center')}}  {{ item.overlaystyle }}">
 
-                {% if (item.overlayposition|default('bottom') == 'bottom') or (item.overlayposition|default('bottom') == 'top') or (item.overlayposition|default('bottom') == 'left') or (item.overlayposition|default('bottom') == 'right') %}
-                    <div class="uk-overlay {{ overlay_position }} uk-text-{{item.content_align|default('center')}} uk-overlay-background {{ slide_overlay_animation }} {% if item.overlaywidth|default(auto)|e != 'auto' %} uk-width-1-{{ item.overlaywidth|default(auto)|e }}{% endif %} {{ item.overlaystyle|default("style1")|e }}">
-                        <div class="slideshow-caption {{slide_overlay_background}} {{ slide_overlay_animation }}">
-                            {% if item.title %}
-                                {{ title }}
-                            {% endif %}
+                <div class="slideshow-caption">
+                    {% if item.title %}
+                        {{ title }}
+                    {% endif %}
 
-                            {% if item.description %}
-                                {{ description }}
-                            {% endif %}
+                    {% if item.description %}
+                        {{ description }}
+                    {% endif %}
 
-                            {% if item.buttons %}
-                                {{ buttons }}
-                            {% endif %}
-                        </div>
-                    </div>
-                {% else %}
-                    <div class="uk-overlay {{ overlay_position }} uk-text-{{item.content_align|default('center')}} {{ slide_overlay_animation }}{% if item.overlaycontainer|default(0) == 1 %} g-overlay-container{% endif %} {{ item.overlaystyle|default("style1")|e }}">
-                        <div class="slideshow-caption {{slide_overlay_background}} {{ slide_overlay_animation }} uk-overlay-background {% if item.overlaywidth|default(auto)|e != 'auto' %} uk-width-1-{{ item.overlaywidth|default(auto)|e }}{% endif %}">
-                            {% if item.title %}
-                                {{ title }}
-                            {% endif %}
+                    {% if item.buttons %}
+                        {{ buttons }}
+                    {% endif %}
+                </div>
+            </div>
 
-                            {% if item.description %}
-                                {{ description }}
-                            {% endif %}
-
-                            {% if item.buttons %}
-                                {{ buttons }}
-                            {% endif %}
-                        </div>
-                    </div>
-                {% endif %}
-
-            {% endif %}
-
-            {% if item.overlaystyle|default('style1') == 'style2' or item.overlaystyle|default('style1') == 'style3' %}
-                
-                {% if (item.overlayposition|default('bottom') == 'bottom') or (item.overlayposition|default('bottom') == 'top') or (item.overlayposition|default('bottom') == 'left') or (item.overlayposition|default('bottom') == 'right') %}
-                     <div class="uk-overlay {{ overlay_position }} uk-text-{{item.content_align|default('center')}} {{ slide_overlay_animation }} {% if item.overlaywidth|default(auto)|e != 'auto' %} uk-width-1-{{ item.overlaywidth|default(auto)|e }}{% endif %} {{ item.overlaystyle|default("style1")|e }}">
-                        <div class="slideshow-caption {{slide_overlay_background}}  {{ slide_overlay_animation }}">
-                            {% if item.title %}
-                                {{ title }}
-                            {% endif %}
-
-                            {% if item.description %}
-                                {{ description }}
-                            {% endif %}
-
-                            {% if item.buttons %}
-                                {{ buttons }}
-                            {% endif %}
-                        </div>
-                    </div>
-                {% else %}
-                    <div class="uk-overlay {{ overlay_position }} uk-text-{{item.content_align|default('center')}} {% if item.overlaycontainer|default(0) == 1 %} g-overlay-container{% endif %} {{ item.overlaystyle|default("style1")|e }}">
-                        <div class="slideshow-caption {{slide_overlay_background}}  {{ slide_overlay_animation }} {% if item.overlaywidth|default(auto)|e != 'auto' %} uk-width-1-{{ item.overlaywidth|default(auto)|e }}{% endif %}">
-                            {% if item.title %}
-                                {{ title }}
-                            {% endif %}
-
-                            {% if item.description %}
-                                {{ description }}
-                            {% endif %}
-
-                            {% if item.buttons %}
-                                {{ buttons }}
-                            {% endif %}
-                        </div>
-                    </div>
-                {% endif %}
-
-            {% endif %}
 
         {% endset %}
 

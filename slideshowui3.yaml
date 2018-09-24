@@ -1,5 +1,5 @@
 name: Slideshowui3
-description: Display slideshow using UIkit 3 (by Olivares).
+description: Display slideshow using UIkit 3 by José Olivares (based on the slideshow free particle from inspiretheme ).
 type: particle
 
 configuration:
@@ -242,15 +242,10 @@ form:
                 _blank: New Window
 
         .overlaystyle:
-          type: select.select
-          label: Overlay Style
-          description: Select the overlay style (Title and Description).
-          placeholder: 'Select...'
-          default: style1
-          options:
-            style1: Style 1
-            style2: Style 2
-            style3: Style 3
+          type: input.selectize
+          label: Ovarlay CSS Class
+          description: CSS classes for Overlay Div.
+
 
         .overlaybackground:
           type: select.select
@@ -262,16 +257,6 @@ form:
             none: none
             white: White
             dark: Dark            
-
-        .overlaycontainer:
-          type: select.select
-          label: Overlay Container
-          description: Enable or disable the Overlay Container. It is a very handy option especially for Fullwidth Slideshows.
-          placeholder: 'Select...'
-          default: 0
-          options:
-            1: Enabled
-            0: Disabled
 
         .overlayposition:
           type: select.select
