@@ -8,7 +8,7 @@ What's new?
  
 -It uses the updated UIkit 3 framework
 
--Some new parameters added in order to a better customize of the slideshow.
+-Some new parameters added in order to provide a better customization of the slideshow.
 
 
 Note: This release is not fully tested, I made it because I need it into a  projec.
