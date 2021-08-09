@@ -34,4 +34,4 @@ Note: This release is not fully tested, I made it because I need it into a  proj
 
 2-Copy the uikit.html.twig and uikit.yaml files to root/templates/TEMPLATE_DIR/custom/particles (if the particles folder does not exist, you have to create it manually)
 
-3-Add uikit for Gantry5 framework to your Gantry 5 Template (search for Setting Page tab)
+3-Add uikit for Gantry5 framework to your Gantry 5 Template (search from Setting Page tab)
