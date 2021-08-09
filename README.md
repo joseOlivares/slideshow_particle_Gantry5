@@ -14,7 +14,7 @@ What's new?
 Note: This release is not fully tested, I made it because I need it into a  project.
 
 
-#Installation on Joomla:
+## Installation on Joomla:
 
 1-Copy the slideshowui3.html.twig and slideshowui3.yaml files to root/templates/TEMPLATE_DIR/custom/particles (if the particles folder does not exist, you have to create it manually)
 
@@ -28,7 +28,7 @@ Note: This release is not fully tested, I made it because I need it into a  proj
   If the custom.scss file does not exists, you will need to create it manually. Also, make sure your custom.scss file has the @import "dependencies"; code at the very top.
 
 
-#Installing Uikit3 inside Gantry5 Joomla Template
+## Installing Uikit3 inside Gantry5 Joomla Template
 
 1-Copy the css and js folders to root/templates/TEMPLATE_DIR/custom/uikit (if the uikit folder does not exist, you have to create it manually)
 
